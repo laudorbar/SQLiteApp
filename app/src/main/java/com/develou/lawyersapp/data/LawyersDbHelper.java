@@ -31,20 +31,6 @@ public class LawyersDbHelper extends SQLiteOpenHelper {
                 + LawyerEntry.AVATAR_URI + " TEXT,"
                 + "UNIQUE (" + LawyerEntry.ID + "))");
 
-        // Contenedor de valores
-        ContentValues values = new ContentValues();
-
-        // Pares clave-valor
-        values.put(LawyerEntry.ID, "L-001");
-        values.put(LawyerEntry.NAME, "Carlos solarte");
-        values.put(LawyerEntry.SPECIALTY, "Abogado penalista");
-        values.put(LawyerEntry.PHONE_NUMBER, "300 200 1111");
-        values.put(LawyerEntry.BIO, "Carlos es un profesional con 5 años de trayectoria.");
-        values.put(LawyerEntry.AVATAR_URI, "carlos_solarte.jpg");
-
-        // Insertar...
-        db.insert(LawyerEntry.TABLE_NAME, null, values);
-
         // Insertar datos ficticios para prueba inicial
         mockData(db);
 
